@@ -6,6 +6,7 @@
 /* Secondary- #6556CD */
 *{
     transition:  all ease-in-out;
+ 
 }
 ::-webkit-scrollbar{
     width: 7px;
