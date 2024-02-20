@@ -5,6 +5,7 @@ import Headers from '../Templates/Header';
 import Dropdown from '../Templates/Dropdown';
 import HorizontalCards from '../Templates/HorizantalCards';
 import axios from '../../Utils/axios';
+import Loader from '../Templates/Loader';
 const Home = () => {
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState([]);
@@ -19,13 +20,12 @@ const Home = () => {
       console.log("getheaderWallpaper error", error);
     }
   };
-  const handleCategoryChange = (e) => {
-    setCategoery(e.target.value);
-  };
+
   const getTrending = async () => {
     try {
-      console.log(categoery); 
+     
       const d = await axios.get(`trending/${categoery}/day`);
+
       setTrending(d.data.results);
     } catch (error) {
       console.log("getTrending error", error);
@@ -37,6 +37,7 @@ const Home = () => {
       getheaderWallpaper();
     }
     if (!trending.length) {
+      console.log(categoery)
       getTrending();
     }
   }, [categoery]);
@@ -52,14 +53,14 @@ const Home = () => {
             Trending
           </h1>
           <div className='mr-4'>
-          <Dropdown title="Select Category" options={['Movie', 'TV', 'All']} func={handleCategoryChange} />
+          <Dropdown title="Select Category" options={['movie', 'tv', 'all']} func={(e)=>setCategoery(e.target.value)} />
           </div>
         </div>
         <HorizontalCards data={trending} />
       </div>
     </>
   ) : (
-    <h1>Loading...</h1>
+    <Loader/>
   );
 };
 

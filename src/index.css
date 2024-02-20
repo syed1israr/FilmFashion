@@ -43,7 +43,7 @@ select::-ms-expand{
 select{
     position: relative;
     display: flex;
-    width: 20em;
+    width: 10em;
     height: 3em;
     
     line-height: 3;
