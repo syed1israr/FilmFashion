@@ -2,36 +2,65 @@ import React, { useEffect ,useState } from 'react';
 import SideNav from '../Templates/SideNav';
 import Topnav from '../Templates/Topnav';
 import Headers from '../Templates/Header';
+import Dropdown from '../Templates/Dropdown';
+import HorizontalCards from '../Templates/HorizantalCards';
 import axios from '../../Utils/axios';
 const Home = () => {
+  const [wallpaper, setWallpaper] = useState(null);
+  const [trending, setTrending] = useState([]);
+  const [categoery, setCategoery] = useState("all");
 
-  const [wallpaper, setwallpaper] = useState(null);
-
-  const getheaderWallpaper=async()=>{
+  const getheaderWallpaper = async () => {
     try {
-      const d=await axios.get(`trending/all/day`);
-     let randomeData= d.data.results[(Math.random()*d.data.results.length).toFixed()]
-      setwallpaper(randomeData)
-      
+      const d = await axios.get(`trending/all/day`);
+      let randomeData = d.data.results[(Math.random() * d.data.results.length).toFixed()];
+      setWallpaper(randomeData);
     } catch (error) {
-      console.log("getSearches error",error)
+      console.log("getheaderWallpaper error", error);
     }
-  }
+  };
+  const handleCategoryChange = (e) => {
+    setCategoery(e.target.value);
+  };
+  const getTrending = async () => {
+    try {
+      console.log(categoery); 
+      const d = await axios.get(`trending/${categoery}/day`);
+      setTrending(d.data.results);
+    } catch (error) {
+      console.log("getTrending error", error);
+    }
+  };
 
-  useEffect(()=>{
-    !wallpaper && getheaderWallpaper();
-  },[])
+  useEffect(() => {
+    if (!wallpaper) {
+      getheaderWallpaper();
+    }
+    if (!trending.length) {
+      getTrending();
+    }
+  }, [categoery]);
 
-
-  return wallpaper?  (
-     <>
-      <SideNav/>
-      <div className="w-[80%] h-full">
-        <Topnav/>
-        <Headers data={wallpaper}/>
+  return wallpaper && trending ? (
+    <>
+      <SideNav />
+      <div className="w-[80%] h-full overflow-auto overflow-x-hidden">
+        <Topnav />
+        <Headers data={wallpaper} />
+        <div className=' mt-2 ml-[20px] mb-3 flex justify-between' >
+          <h1 className='text-3xl  ml-[10px] mt-2 font-semibold text-zinc-400'>
+            Trending
+          </h1>
+          <div className='mr-4'>
+          <Dropdown title="Select Category" options={['Movie', 'TV', 'All']} func={handleCategoryChange} />
+          </div>
+        </div>
+        <HorizontalCards data={trending} />
       </div>
-      </>
-  ) : <h1>loading</h1>;
+    </>
+  ) : (
+    <h1>Loading...</h1>
+  );
 };
 
 export default Home;
