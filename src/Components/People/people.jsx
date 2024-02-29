@@ -67,7 +67,7 @@ const people = () => {
        
        loader={<Loader/>}
        >
-       <Cards data={person} title={categoery}/>
+       <Cards data={person} title="person"/>
        </InfiniteScroll>
        
         

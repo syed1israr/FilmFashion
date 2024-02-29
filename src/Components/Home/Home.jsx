@@ -10,6 +10,7 @@ const Home = () => {
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState([]);
   const [categoery, setCategoery] = useState("all");
+  const [page,setpage] = useState(1)
 
   const getheaderWallpaper = async () => {
     try {
@@ -24,8 +25,9 @@ const Home = () => {
   const getTrending = async () => {
     try {
      
-      const d = await axios.get(`trending/${categoery}/day`);
-
+      const d = await axios.get(`trending/${categoery}/day?page=${page}`);
+      console.log(d.data)
+      setpage(page+1)
       setTrending(d.data.results);
     } catch (error) {
       console.log("getTrending error", error);
@@ -40,7 +42,7 @@ const Home = () => {
       console.log(categoery)
       getTrending();
     }
-  }, [categoery]);
+  }, [categoery,page]);
 
   return wallpaper && trending ? (
     <>

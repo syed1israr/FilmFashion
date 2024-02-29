@@ -38,10 +38,12 @@ const Topnav = () => {
         <i onClick={clearSearch} className="text-xl text-zinc-400 ri-crosshair-2-line"></i>
       )}
 
-      <div className='absolute w-[50%] max-h-[50vh] top-[100%] left-[20%] bg-zinc-200 overflow-auto rounded'>
+      <div className='absolute z-50 w-[50%] max-h-[50vh] top-[100%] left-[20%] bg-zinc-200 overflow-auto rounded'>
       {
   searches.map((s, i) => (
     <Link
+      to={`/${s.media_type}/details/${s.id}`}
+
       key={i}
       className={`duration-100 hover:text-black hover:bg-zinc-600 w-[100%] text-zinc-800 p-10 flex justify-start items-center border-b-2 border-zinc-100 font-semibold `}
     >

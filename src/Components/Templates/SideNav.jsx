@@ -34,7 +34,7 @@ const SideNav = () => {
       <Link  to={'/movie'}  className='hover:bg-[#6556CD] p-5 text-white rounded-lg duration-300 flex items-center ' ><RiMovieLine
           className="text-white  text-2xl ri-arrow-up-circle-fill mr-3"
         />Movies</Link>
-      <Link  to={'/tv_show'} className='hover:bg-[#6556CD] p-5 text-white rounded-lg duration-300 flex items-center'><RiTv2Line
+      <Link  to={'/tv'} className='hover:bg-[#6556CD] p-5 text-white rounded-lg duration-300 flex items-center'><RiTv2Line
           className="text-white  text-2xl ri-arrow-up-circle-fill mr-3"
         />TV Shows</Link>
       <Link to={'/person'}  className='hover:bg-[#6556CD] p-5 text-white rounded-lg duration-300 flex items-center'><RiTeamFill
