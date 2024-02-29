@@ -11,6 +11,7 @@ export const asyncloadMovie=(id)=>async(dispath,getstate)=>{
         const similar= await axios.get(`/movie/${id}/similar`);
         const Videos= await axios.get(`/movie/${id}/videos`);
         const watchproviders= await axios.get(`/movie/${id}/watch/providers`);
+        const translations= await axios.get(`/movie/${id}/translations`);
         let the_ultimate_dets={
             detail:detail.data,
             externalid:externalid.data,
@@ -18,6 +19,7 @@ export const asyncloadMovie=(id)=>async(dispath,getstate)=>{
             similar:similar.data.results,
             Videos:Videos.data.results,
             watchproviders:watchproviders.data.results.IN,
+            translations:translations.data.translations.map(t=>t.name)
         };
         dispath(loadeMovie(the_ultimate_dets))
         console.log("ultimate details" ,the_ultimate_dets)
