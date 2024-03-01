@@ -1,7 +1,10 @@
 import '../Contactus/Contact.css'
+import Topnav from '../Templates/Topnav';
 const contact = () => {
     return (
+     
       <div id="page3">
+        
         <div id="left1">
           <div id="text5">
             <h5 className='-mt-7'>Contact us !</h5>
@@ -26,6 +29,7 @@ const contact = () => {
           <div className="line l2"></div>
         </div>
       </div>
+      
     );
   };
   

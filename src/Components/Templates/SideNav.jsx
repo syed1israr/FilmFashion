@@ -44,12 +44,13 @@ const SideNav = () => {
       <hr  className=' border-none h-[1px] bg-zinc-400'/>
       <nav className='flex flex-col text-zinc-400 text-xl gap-3'>
       <h1 className='text-white font-semibold text-xl mt-3 mb-2 '>Website information</h1>
+      <Link to={'/about'} className='hover:bg-[#3C887E] p-5 text-white rounded-lg duration-300  -mt-2 flex items-center '><RiQuestionFill 
+          className="text-white text-2xl ri-arrow-up-circle-fill mr-3"
+        /> About</Link>
       <Link  to={'/contact'}   className='hover:bg-[#3C887E] p-5 text-white rounded-lg duration-300 mt-2 flex items-center  '><RiCustomerService2Line
           className="text-white text-2xl ri-arrow-up-circle-fill mr-3"
         />contact Us</Link>
-      <Link className='hover:bg-[#3C887E] p-5 text-white rounded-lg duration-300  -mt-2 flex items-center '><RiQuestionFill 
-          className="text-white text-2xl ri-arrow-up-circle-fill mr-3"
-        /> About</Link>
+      
       </nav>
     </div>
   )

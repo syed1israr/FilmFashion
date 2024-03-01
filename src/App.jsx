@@ -10,6 +10,7 @@ import MovieDetails from "../src/Components/Details/Movie/MovieDetails"
 import TVDetails from "../src/Components/Details/Tv/TvDetails"
 import PeopleDetails from "../src/Components/Details/People/PeopleDetails"
 import ContactUs from "./Components/Contactus/ContactUs";
+import About from "./Components/About/About";
 export default function App() {
    console.log("Contact us and About is remaining")
   return (
@@ -18,13 +19,15 @@ export default function App() {
     <Route path="/" element={<Home/>}/>
     <Route path="/trending" element={<Trending/>}/>
     <Route path="/popular" element={<Popular/>}/>
-    <Route path="/contact" element={<ContactUs/>}/>
+    
     <Route path="/movie" element={<Movie/>}/>
     <Route path="/movie/details/:id" element={<MovieDetails/>}/>
     <Route path="/tv" element={<Tv_show/>}/>
     <Route path="/tv/details/:id" element={<TVDetails/>}/>
     <Route path="/person" element={<People/>}/>
     <Route path="/person/details/:id" element={<PeopleDetails/>}/>
+    <Route path="/contact" element={<ContactUs/>}/>
+    <Route path="/about" element={<About/>}/>
     </Routes>
 
   </div>
