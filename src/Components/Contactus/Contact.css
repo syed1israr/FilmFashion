@@ -4,10 +4,11 @@
     box-sizing: border-box;
     font-family: jost;
     
-    background: #fff;
+   
   }
   
   #page3 {
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
