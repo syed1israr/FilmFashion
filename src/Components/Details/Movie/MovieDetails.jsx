@@ -9,14 +9,15 @@ import { RiArrowDropLeftLine } from 'react-icons/ri'
 import { RiEarthFill } from 'react-icons/ri'
 import { RiHome2Fill } from 'react-icons/ri'
 import Loader from '../../Templates/Loader.jsx'
+
 import HorizantalCards from '../../Templates/HorizantalCards.jsx'
 
 const MovieDetails = () => {
   const  { pathname }=useLocation()
   const navigate=useNavigate()
-  const {id}=useParams()
+  const { id }=useParams()
   const dispath=useDispatch();
-  const {info}=useSelector(state=>state.movie)
+  const { info }=useSelector(state=>state.movie)
  
   useEffect(()=>{
     dispath(asyncloadMovie(id))
@@ -122,8 +123,9 @@ const MovieDetails = () => {
     <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
     <HorizantalCards  data={info.recomendations || info.similar} /> 
     </div>
-    <Outlet/>
+              <Outlet/>
     </div>
+    
   ) : <Loader/> 
  
 }

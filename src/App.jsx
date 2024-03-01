@@ -12,6 +12,7 @@ import PeopleDetails from "../src/Components/Details/People/PeopleDetails"
 import ContactUs from "./Components/Contactus/ContactUs";
 import About from "./Components/About/About";
 import Trailer from "./Components/Templates/Trailer";
+import NotFound from "../src/Components/Templates/NotFound"
 export default function App() {
    console.log("Contact us and About is remaining")
   return (
@@ -30,6 +31,9 @@ export default function App() {
     <Route path="/person/details/:id" element={<PeopleDetails/>}/>
     <Route path="/contact" element={<ContactUs/>}/>
     <Route path="/about" element={<About/>}/>
+
+
+    <Route path="*" element={<NotFound/>}/>
     </Routes>
 
   </div>
