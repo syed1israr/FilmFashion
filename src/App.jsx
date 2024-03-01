@@ -9,14 +9,16 @@ import People  from "./Components/People/people";
 import MovieDetails from "../src/Components/Details/Movie/MovieDetails"
 import TVDetails from "../src/Components/Details/Tv/TvDetails"
 import PeopleDetails from "../src/Components/Details/People/PeopleDetails"
+import ContactUs from "./Components/Contactus/ContactUs";
 export default function App() {
    console.log("Contact us and About is remaining")
   return (
-  <div className="w-screen- h-screen bg-[#1F1E24] flex">
+  <div className="w-screen- h-screen bg-[#071013] flex">
     <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/trending" element={<Trending/>}/>
     <Route path="/popular" element={<Popular/>}/>
+    <Route path="/contact" element={<ContactUs/>}/>
     <Route path="/movie" element={<Movie/>}/>
     <Route path="/movie/details/:id" element={<MovieDetails/>}/>
     <Route path="/tv" element={<Tv_show/>}/>

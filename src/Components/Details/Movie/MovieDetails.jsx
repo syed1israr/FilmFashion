@@ -17,7 +17,7 @@ const MovieDetails = () => {
   const {id}=useParams()
   const dispath=useDispatch();
   const {info}=useSelector(state=>state.movie)
-
+ 
   useEffect(()=>{
     dispath(asyncloadMovie(id))
     return ()=>{
@@ -25,7 +25,7 @@ const MovieDetails = () => {
     }
   },[]);
   return info ? (
-    <div className='w-screen h-screen px-[10%] overflow-hidden' style={{
+    <div className='w-screen h-screen px-[10%] overflow-hidden overflow-y-auto' style={{
       background: `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0.2)), url(https://image.tmdb.org/t/p/original/${ info.detail.backdrop_path})`,
       backgroundPosition:'center',
       backgroundSize:'cover',
@@ -82,7 +82,7 @@ const MovieDetails = () => {
         <p className='text-white mb-10'>{info.translations.join("  ,  ")}</p>
 
         <Link to={`${pathname}/trailer`} className='text-white mt-[90%]  p-5 bg-purple-600 rounded-lg '> 👻 play Trailer </Link>
-
+        
       </div>
         </div>
         <div className='w-full  '>
@@ -118,7 +118,10 @@ const MovieDetails = () => {
         </div>
              
               
-       
+      <div className="w-screen mt-4">
+    <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
+    <HorizantalCards  data={info.recomendations || info.similar} /> 
+    </div>
     </div>
   ) : <Loader/> 
  

@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* primary- #1F1E24 */
-/* Secondary- #6556CD */
+/* primary- #071013 */
+/* Secondary- #3C887E */
 *{
     transition:  all ease-in-out;
  
@@ -13,11 +13,11 @@
     height: 7px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #1F1E24;
+    background-color: #071013;
    
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: #6556CD;
+    background-color: #3C887E;
    
 }
 select{
@@ -63,5 +63,5 @@ select::after{
     transition: 0.25s all ease-in-out;
 }
 select:hover{
-    color: #6556CD;
+    color: #3C887E;
 }

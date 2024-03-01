@@ -19,7 +19,7 @@ const Header = ({ data }) => {
         <i className="ri-megaphone-line text-yellow-500"></i> {" "}{data.release_date || "Coming Soon... "}
         <i className="ri-film-fill  text-yellow-500 ml-5" ></i> {" "}{data.media_type.toUpperCase()}
      </p>
-     <Link className='p-2 rounded text-white  bg-[#6556CD] font-semibold mt-4'> watch Trailer</Link>
+     <Link className='p-2 rounded text-white  bg-[#3C887E] font-semibold mt-4'> watch Trailer</Link>
     </div>
   );
 };
