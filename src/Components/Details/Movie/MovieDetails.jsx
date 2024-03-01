@@ -92,8 +92,9 @@ const MovieDetails = () => {
               {
                info.watchproviders &&
                info.watchproviders.flatrate &&
-               info.watchproviders.flatrate.map((w)=>(
+               info.watchproviders.flatrate.map((w,i)=>(
                  <img
+                 key={i}
                  title={w.provider_name}
                  className='w-[7vh] h-[7vh] object-cover rounded-md '
                  src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
@@ -105,8 +106,9 @@ const MovieDetails = () => {
               {
                info.watchproviders &&
                info.watchproviders.buy &&
-               info.watchproviders.buy.map((w)=>(
+               info.watchproviders.buy.map((w,i)=>(
                  <img
+                 key={i}
                  title={w.provider_name}
                  className='w-[7vh] h-[7vh] object-cover rounded-md '
                  src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}

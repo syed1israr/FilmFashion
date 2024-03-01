@@ -27,6 +27,7 @@ export default function App() {
     <Route path="/movie/details/:id/trailer" element={<Trailer/>}/>
     <Route path="/tv" element={<Tv_show/>}/>
     <Route path="/tv/details/:id" element={<TVDetails/>}/>
+    <Route path="/tv/details/:id/trailer" element={<Trailer/>}/>
     <Route path="/person" element={<People/>}/>
     <Route path="/person/details/:id" element={<PeopleDetails/>}/>
     <Route path="/contact" element={<ContactUs/>}/>
