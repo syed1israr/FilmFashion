@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import  { asyncloadMovie } from '../../../Actions/MovieAction.jsx'
 import { removeMovie } from "../../../Reducers/MovieSlice.jsx"
-import { useLocation, useParams } from 'react-router-dom'
+import { Outlet, useLocation, useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { RiArrowDropLeftLine } from 'react-icons/ri'
@@ -23,7 +23,7 @@ const MovieDetails = () => {
     return ()=>{
       dispath(removeMovie())
     }
-  },[]);
+  },[id]);
   return info ? (
     <div className='w-screen h-screen px-[10%] overflow-hidden overflow-y-auto' style={{
       background: `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0.2)), url(https://image.tmdb.org/t/p/original/${ info.detail.backdrop_path})`,
@@ -122,6 +122,7 @@ const MovieDetails = () => {
     <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
     <HorizantalCards  data={info.recomendations || info.similar} /> 
     </div>
+    <Outlet/>
     </div>
   ) : <Loader/> 
  

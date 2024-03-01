@@ -40,25 +40,25 @@ const Topnav = () => {
 
       <div className='absolute z-50 w-[50%] max-h-[50vh] top-[100%] left-[20%] bg-zinc-200 overflow-auto rounded'>
       {
-  searches.map((s, i) => (
-    <Link
-      to={`/${s.media_type}/details/${s.id}`}
+searches.map((s, i) => (
+  <Link
+    to={`/${s.media_type}/details/${s.id}`}
+    key={i}
+    className="duration-100 bg-[#071013] text-zinc-200  hover:text-black hover:bg-slate-300 w-full p-8 flex justify-start items-center border-b border-slate-900 font-semibold search-result-item"
+  >
+    <img
+      src={
+        s.backdrop_path || s.profile_path
+          ? `https://image.tmdb.org/t/p/w500/${s.backdrop_path || s.profile_path}`
+          : noimg // Use a pre-defined variable with the no image path
+      }
+      alt={s.original_title || s.name || s.title || s.original_name || "Image"}
+      className="w-24 h-24 rounded-lg mr-8 shadow-md" // Consistent sizing and rounded corners
+    />
+    <span className="text-lg leading-6">{s.original_title || s.name || s.title || s.original_name}</span>
+  </Link>
+))
 
-      key={i}
-      className={`duration-100 hover:text-black hover:bg-zinc-600 w-[100%] text-zinc-800 p-10 flex justify-start items-center border-b-2 border-zinc-100 font-semibold `}
-    >
-      <img
-        src={
-          s.backdrop_path || s.profile_path
-            ? `https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`
-            : noimg 
-        }
-        alt={s.original_title || s.name || s.title || s.original_name || 'Image'} // Provide alt text
-        className={`w-[10vh] h-[10vh] object-cover rounded mr-8 shadow-lg`}
-      />
-      <span>{s.original_title || s.name || s.title || s.original_name}</span>
-    </Link>
-  ))
 }
 
 

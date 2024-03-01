@@ -7,8 +7,11 @@ import Topnav from '../Templates/Topnav'
 function About() {
   return (
        
-    <div className='bg-[#071013] text-zinc-200'>
-   <Topnav/>
+    <div className='bg-[#071013] text-zinc-200 relative overflow-x-hidden'>
+      <div className='mt-5 absolute  ml-[100px] w-screen '>
+      <Topnav/>
+      </div>
+   
     <section className='mt-[10%]'>
     <h1 className='text-5xl m-6 mx-16 text-[#3C887E] ' >About Us</h1>
     <div className=' mx-16' >
