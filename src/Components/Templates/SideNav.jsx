@@ -15,7 +15,7 @@ const SideNav = () => {
     <div className="w-[18%] h-full  border-r-2 border-zinc-200 p-10 ">
       <h1 className='text-2xl text-white font-bold flex items-center'>
         <MdTrendingUp className="text-white text-2xl mr-3" />
-        <span className='text-2xl'>Database</span>
+        <span className='text-2xl'>FilmFusion</span>
       </h1>
       <nav className='flex flex-col text-zinc-400 text-xl gap-3 mb-3'>
         <h1 className='text-white font-semibold text-xl mt-10 mb-5 '>News Feeds</h1>

@@ -122,7 +122,7 @@ const MovieDetails = () => {
         <hr  className='mt-5 mb-5'/>
     <div className="w-screen mt-4">
     <h2 className="text-3xl font-semibold text-white pl-5" >Seasons</h2>
-    <HorizantalCards  data={info.detail.seasons} /> 
+    <HorizontalCards2  data={info.detail.seasons} /> 
     </div>
 
     <hr  className='mt-5 mb-5'/>
