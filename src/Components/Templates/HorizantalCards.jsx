@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import noimg from '../../../public/OIP.jpeg'
 const HorizontalCards = ({ data }) => {
   return (
     <div className='w-[100%] h-[40vh] flex overflow-y-hidden mb-5 mt-5 pb-3 '>
@@ -12,9 +12,9 @@ const HorizontalCards = ({ data }) => {
         >
           <img
             className='w-full h-[45%] object-cover rounded-[5px]'
-            src={`https://image.tmdb.org/t/p/original/${
+            src={ item.backdrop_path || item.profile_path || item.poster_path ? `https://image.tmdb.org/t/p/original/${
               item.backdrop_path || item.profile_path || item.poster_path
-            }`}
+            }` : noimg}
             alt=''
           />
           <div className='text-white h-[65%] p-3'>

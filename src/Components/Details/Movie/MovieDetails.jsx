@@ -82,7 +82,7 @@ const MovieDetails = () => {
         <h1 className='text-2xl mt-5  text-white mb-3 '>Translations available</h1>
         <p className='text-white mb-10'>{info.translations.join("  ,  ")}</p>
 
-        <Link to={`${pathname}/trailer`} className='text-white mt-[90%]  p-5 bg-purple-600 rounded-lg '> 👻 play Trailer </Link>
+        <Link to={`${pathname}/trailer`} className='text-white mt-[90%]  p-5 bg-[#00A6ED] rounded-lg '> ▶️play Trailer </Link>
         
       </div>
         </div>
@@ -120,12 +120,15 @@ const MovieDetails = () => {
         </div>
         </div>
              
-              
-      <div className="w-screen mt-4">
-    <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
-    <HorizantalCards  data={info.recomendations || info.similar} /> 
-    </div>
-              <Outlet/>
+      {
+        (info.recomendations.length > 0 || info.similar.length>0)  &&
+        <div className="w-screen mt-4">
+        <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
+        <HorizantalCards  data={info.recomendations || info.similar} /> 
+        </div>
+      }          
+   
+    <Outlet/>
     </div>
     
   ) : <Loader/> 
