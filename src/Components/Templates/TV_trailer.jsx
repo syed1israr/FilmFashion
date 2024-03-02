@@ -7,10 +7,10 @@ import Loader from './Loader';
 const Trailer = () => {
     const { pathname }=useLocation()
     const navigate=useNavigate()
-    const YTvideo=useSelector(state=>state.TV.info.videos)
+    const YTvideo=useSelector(state=>state.tv.info.Videos)
     
     
-  return YTvideo ?  (
+  return  (
     <div className='bg-[rgba(0,0,0,0.8)] absolute top-0 left-0 w-screen h-screen flex items-center justify-center z-10000 '
     >
       <Link
@@ -20,13 +20,15 @@ const Trailer = () => {
         <X/>
       </Link>
       <ReactPlayer
-          controls
+          controls 
+          autoplay
+         
           height={600}
           width={1000}
-       url={`https://www.youtube.com/watch?v=9wMM3N4az0E`} />
+         url={`https://www.youtube.com/watch?v=${YTvideo[0].key}`} />
     
     </div>
-  ) : <Loader/>
+  ) 
 }
 
 export default Trailer

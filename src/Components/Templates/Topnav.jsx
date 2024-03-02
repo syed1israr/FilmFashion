@@ -44,12 +44,12 @@ const Topnav = () => {
         <X onClick={clearSearch} className="text-xl text-zinc-400 cursor-pointer" />
       )}
 
-      <div className='absolute z-50 w-[50%] max-h-[50vh] top-[100%] left-[20%] bg-zinc-200 overflow-auto rounded'>
+      <div className='absolute z-50 w-[50%] max-h-[50vh] top-[100%] left-[20%]  overflow-auto rounded'>
         {searchResults.map((result, i) => (
           <Link
             to={`/${result.media_type}/details/${result.id}`}
             key={i}
-            className="duration-100 bg-[#071013] text-zinc-200  hover:text-black hover:bg-slate-300 w-full p-8 flex justify-start items-center border-b border-slate-900 font-semibold search-result-item"
+            className="duration-100 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border  text-zinc-200  hover:text-black  hover:bg-[#3C887E] w-full p-8 flex justify-start items-center border-b border-slate-900 font-semibold search-result-item"
           >
             <img
               src={result.backdrop_path || result.profile_path ? `https://image.tmdb.org/t/p/w500/${result.backdrop_path || result.profile_path}` : noimg}
