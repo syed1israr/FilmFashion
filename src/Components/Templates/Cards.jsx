@@ -18,8 +18,13 @@ const Cards = ({data,title}) => {
                 }
                 </h1>
 
+              {
+                c.vote_average && 
                 <div class=" absolute right-[-6%] bottom-[20%] text-zinc-100 rounded-full text-xl bg-yellow-600 w-[5vh] h-[5vh] flex justify-center items-center 
                 "> {(c.vote_average * 10).toFixed()} <sup>%</sup></div>
+              }
+
+               
                 </Link>
             ))
         }
