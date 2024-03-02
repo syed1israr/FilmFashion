@@ -16,7 +16,7 @@ const people = () => {
     const [person, setperson] = useState([])
     const [page, setpage] = useState(1)
     const [hasMore, sethasMore] = useState(true)
-    document.title= `person + Category ${categoery} ` 
+    document.title= `person_${categoery} ` 
     const getperson = async () => {
         try {
          

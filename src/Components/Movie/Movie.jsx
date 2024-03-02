@@ -14,7 +14,7 @@ const Movie = () => {
     const [Movie, setMovie] = useState([])
     const [page, setpage] = useState(1)
     const [hasMore, sethasMore] = useState(true)
-    document.title= `Movie + Category ${categoery} ` 
+    document.title= `Movie_${categoery} ` 
     const getMovie = async () => {
         try {
          

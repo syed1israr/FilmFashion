@@ -4,7 +4,9 @@ const contact = () => {
     return (
      
       <div id="page3">
-        
+      <div className='-mt-[700px] absolute  ml-[100px] w-screen '>
+      <Topnav/>
+      </div>
         <div id="left1">
           <div id="text5">
             <h5 className='-mt-7'>Contact us !</h5>

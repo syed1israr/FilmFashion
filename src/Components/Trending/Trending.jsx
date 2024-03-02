@@ -9,7 +9,7 @@ import Loader from '../Templates/Loader';
 import Cards from "../Templates/Cards"
 import InfiniteScroll from 'react-infinite-scroll-component';
 const Trending = () => {
-    document.title= "Trending + Category"
+    document.title= "Trending"
     const navigate =useNavigate();
     const [categoery, setcategoery] = useState("all")
     const [duration, setduration] = useState("day")

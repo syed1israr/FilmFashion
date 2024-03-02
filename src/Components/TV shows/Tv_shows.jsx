@@ -14,7 +14,7 @@ const Tv_show = () => {
     const [tv, settv] = useState([])
     const [page, setpage] = useState(1)
     const [hasMore, sethasMore] = useState(true)
-    document.title= `tv + Category ${categoery} ` 
+    document.title= `TV_${categoery} ` 
     const gettv = async () => {
         try {
          

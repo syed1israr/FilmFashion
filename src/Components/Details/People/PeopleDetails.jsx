@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import  { asyncloadperson } from '../../../Actions/PersonAction.jsx'
 import { removeperson } from "../../../Reducers/PeopleSlice.jsx"
-import { Outlet, useLocation, useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { RiArrowDropLeftLine, RiFacebookBoxFill } from 'react-icons/ri'
@@ -14,12 +14,12 @@ import Loader from '../../Templates/Loader.jsx'
 import HorizantalCards from '../../Templates/HorizantalCards.jsx'
 
 const MovieDetails = () => {
-  const  { pathname }=useLocation()
+  
   const navigate=useNavigate()
   const { id }=useParams()
   const dispath=useDispatch();
   const { info }=useSelector(state=>state.people)
- console.log( " person ",info)
+ 
   useEffect(()=>{
     dispath(asyncloadperson(id))
     return ()=>{
