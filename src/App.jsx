@@ -14,7 +14,7 @@ import About from "./Components/About/About";
 import Trailer from "./Components/Templates/Trailer";
 import NotFound from "../src/Components/Templates/NotFound"
 export default function App() {
-   console.log("Contact us and About is remaining")
+  
   return (
   <div className="w-screen- h-screen bg-[#071013] flex">
     <Routes>
@@ -23,8 +23,10 @@ export default function App() {
     <Route path="/popular" element={<Popular/>}/>
     
     <Route path="/movie" element={<Movie/>}/>
-    <Route path="/movie/details/:id" element={<MovieDetails/>}/>
-    <Route path="/movie/details/:id/trailer" element={<Trailer/>}/>
+    <Route path="/movie/details/:id" element={<MovieDetails />}>
+    <Route path="trailer" element={<Trailer />} />
+    </Route>
+
     <Route path="/tv" element={<Tv_show/>}/>
     <Route path="/tv/details/:id" element={<TVDetails/>}/>
     <Route path="/tv/details/:id/trailer" element={<Trailer/>}/>

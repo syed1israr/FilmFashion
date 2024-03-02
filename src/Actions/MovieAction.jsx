@@ -17,12 +17,12 @@ export const asyncloadMovie=(id)=>async(dispath,getstate)=>{
             externalid:externalid.data,
             recomendations:recomendations.data.results,
             similar:similar.data.results,
-            Videos:Videos.data.results,
+            videos:Videos.data.results,
             watchproviders:watchproviders.data.results.IN,
             translations:translations.data.translations.map(t=>t.name)
         };
         dispath(loadeMovie(the_ultimate_dets))
-        console.log("ultimate details" ,the_ultimate_dets)
+       
     } catch (error) {
         alert("Error:", error)
     }

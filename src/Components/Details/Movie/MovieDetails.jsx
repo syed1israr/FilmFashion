@@ -18,7 +18,7 @@ const MovieDetails = () => {
   const { id }=useParams()
   const dispath=useDispatch();
   const { info }=useSelector(state=>state.movie)
- 
+  
   useEffect(()=>{
     dispath(asyncloadMovie(id))
     return ()=>{
@@ -82,7 +82,7 @@ const MovieDetails = () => {
         <h1 className='text-2xl mt-5  text-white mb-3 '>Translations available</h1>
         <p className='text-white mb-10'>{info.translations.join("  ,  ")}</p>
 
-        <Link to={`${pathname}/trailer`} className='text-white mt-[90%]  p-5 bg-[#00A6ED] rounded-lg '> ▶️play Trailer </Link>
+        <Link to={`${pathname}/trailer`} className='p-2 rounded text-white  bg-[#3C887E] font-semibold mt-4'> watch Trailer </Link>
         
       </div>
         </div>
@@ -127,8 +127,8 @@ const MovieDetails = () => {
         <HorizontalCards2  data={info.recomendations || info.similar} /> 
         </div>
       }          
-   
-    <Outlet/>
+
+    <Outlet />
     </div>
     
   ) : <Loader/> 

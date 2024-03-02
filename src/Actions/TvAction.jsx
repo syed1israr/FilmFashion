@@ -22,7 +22,7 @@ export  const asyncloadtv=(id)=>async(dispath,getstate)=>{
             translations:translations.data.translations.map(t=>t.name)
         };
         dispath(loadTV(the_ultimate_dets))
-        console.log("ultimate TV details" ,the_ultimate_dets)
+       
     } catch (error) {
         alert("Error:", error)
     }

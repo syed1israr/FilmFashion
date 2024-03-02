@@ -105,7 +105,7 @@ const MovieDetails = () => {
         </h1>
         <h1 className='text-2xl text-zinc-400 font-semibold my-5'>Biography</h1>
         <p className='text-zinc-300 mt-3 '>{info.detail.biography}</p>
-        <h1 className='text-lg text-zinc-400 font-semibold my-5'>summary</h1>
+        <h1 className='text-lg text-zinc-400 font-semibold my-5'>Featured In</h1>
         <div className='-ml-[50px]'>
         <HorizantalCards data={info.combined_credits.cast}/>
         </div>

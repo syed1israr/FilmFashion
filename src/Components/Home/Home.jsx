@@ -2,7 +2,7 @@ import React, { useEffect ,useState } from 'react';
 import SideNav from '../Templates/SideNav';
 import Topnav from '../Templates/Topnav';
 import Headers from '../Templates/Header';
-import Dropdown from '../Templates/Dropdown';
+
 import HorizontalCards from '../Templates/HorizantalCards';
 import axios from '../../Utils/axios';
 import Loader from '../Templates/Loader';
@@ -26,7 +26,7 @@ const Home = () => {
     try {
      
       const d = await axios.get(`trending/${categoery}/day?page=${page}`);
-      console.log(d.data)
+      
       setpage(page+1)
       setTrending(d.data.results);
     } catch (error) {
@@ -55,7 +55,7 @@ const Home = () => {
             Trending
           </h1>
           <div className='mr-4'>
-          <Dropdown title="Select Category" options={['movie', 'tv', 'all']} func={(e)=>setCategoery(e.target.value)} />
+          
           </div>
         </div>
         <HorizontalCards data={trending} />

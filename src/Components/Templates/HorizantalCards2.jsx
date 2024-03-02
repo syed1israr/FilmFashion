@@ -18,7 +18,7 @@ const HorizontalCards2 = ({ data }) => {
             alt=''
           />
           <div className='text-white h-[65%] p-3'>
-            <h1 className='text-xl font-semibold text-yellow-300'>{
+            <h1 className='text-xl font-semibold text-[#3C887E]'>{
               item.name || item.title || item.original_name || item.original_title
             }</h1>
             <p className='text-white text-[14px] mb-3'>
