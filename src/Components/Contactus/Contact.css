@@ -72,7 +72,7 @@
     width: 12vw;
     margin-right: -20px;
     transition: all 0.4s ease-in-out;
-    border: 2px solid blue ;
+    
   }
   
   .c1 > i {
@@ -131,7 +131,7 @@
 
   .c1:hover {
     scale: 1.5;
-    background-color: black;
+    
     color: black;
     margin-left: -100px;
   }
@@ -151,7 +151,7 @@
   .circle {
     height: 3vw;
     width: 3vw;
-    background-color: #1E1E24;
+   
     border-radius: 50%;
     display: flex;
     align-items: center;

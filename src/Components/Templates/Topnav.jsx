@@ -1,32 +1,38 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from '../../Utils/axios'
-import noimg from '../../../public/OIP.jpeg'
+import { Search, X } from 'react-feather'; // Import icons from react-feather
+import axios from '../../Utils/axios';
+import noimg from '../../../public/OIP.jpeg';
+
 const Topnav = () => {
-  const [query, setQuery] = useState(''); 
+  const [query, setQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   const clearSearch = () => {
-    setQuery(''); 
+    setQuery('');
+    setSearchResults([]);
   };
 
-  const [searches,setseachers]=useState([])
-  const GetSearches=async()=>{
+  const getSearchResults = async () => {
     try {
-      const d=await axios.get(`/search/multi?query=${query}`);
-      
-      setseachers(d.data.results)
+      const response = await axios.get(`/search/multi?query=${query}`);
+      setSearchResults(response.data.results);
     } catch (error) {
-      console.log("getSearches error",error)
+      console.log("Error fetching search results:", error);
     }
-  }
+  };
 
-  useEffect(()=>{
-    GetSearches();
-  },[query])
+  useEffect(() => {
+    if (query.trim() !== '') {
+      getSearchResults();
+    } else {
+      setSearchResults([]);
+    }
+  }, [query]);
 
   return (
     <div className='w-full h-[10vh] relative flex justify-start items-center pl-[20%]'>
-      <i className="text-3xl text-zinc-400 ri-file-search-line"></i>
+      <Search className="text-3xl text-zinc-400 mr-2" />
       <input
         onChange={(e) => setQuery(e.target.value)}
         type="text"
@@ -35,42 +41,27 @@ const Topnav = () => {
         value={query}
       />
       {query.length > 0 && (
-        <i onClick={clearSearch} className="text-xl text-zinc-400 ri-crosshair-2-line"></i>
+        <X onClick={clearSearch} className="text-xl text-zinc-400 cursor-pointer" />
       )}
 
       <div className='absolute z-50 w-[50%] max-h-[50vh] top-[100%] left-[20%] bg-zinc-200 overflow-auto rounded'>
-      {
-searches.map((s, i) => (
-  <Link
-    to={`/${s.media_type}/details/${s.id}`}
-    key={i}
-    className="duration-100 bg-[#071013] text-zinc-200  hover:text-black hover:bg-slate-300 w-full p-8 flex justify-start items-center border-b border-slate-900 font-semibold search-result-item"
-  >
-    <img
-      src={
-        s.backdrop_path || s.profile_path
-          ? `https://image.tmdb.org/t/p/w500/${s.backdrop_path || s.profile_path}`
-          : noimg // Use a pre-defined variable with the no image path
-      }
-      alt={s.original_title || s.name || s.title || s.original_name || "Image"}
-      className="w-24 h-24 rounded-lg mr-8 shadow-md" // Consistent sizing and rounded corners
-    />
-    <span className="text-lg leading-6">{s.original_title || s.name || s.title || s.original_name}</span>
-  </Link>
-))
-
-}
-
-
-      
+        {searchResults.map((result, i) => (
+          <Link
+            to={`/${result.media_type}/details/${result.id}`}
+            key={i}
+            className="duration-100 bg-[#071013] text-zinc-200  hover:text-black hover:bg-slate-300 w-full p-8 flex justify-start items-center border-b border-slate-900 font-semibold search-result-item"
+          >
+            <img
+              src={result.backdrop_path || result.profile_path ? `https://image.tmdb.org/t/p/w500/${result.backdrop_path || result.profile_path}` : noimg}
+              alt={result.original_title || result.name || result.title || result.original_name || "Image"}
+              className="w-24 h-24 rounded-lg mr-8 shadow-md"
+            />
+            <span className="text-lg leading-6">{result.original_title || result.name || result.title || result.original_name}</span>
+          </Link>
+        ))}
       </div>
-     
     </div>
   );
 };
 
 export default Topnav;
-
-
-
-

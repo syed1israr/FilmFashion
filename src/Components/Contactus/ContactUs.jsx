@@ -13,7 +13,7 @@ const contact = () => {
           <div id="info">
             <div className="infos">
               <div className="circle i1"></div>
-              <h1 className='hi text-2xl '>DataBase.com</h1>
+              <h1 className='hi text-2xl '>FilmFusion.com</h1>
             </div>
             <div className="infos">
               <div className="circle i1"></div>
@@ -24,7 +24,7 @@ const contact = () => {
         <div id="right1">
           <div className="line l1">
             <h1 className='hi text-2xl'>👋 Say Hi!</h1>
-            <div className="circle c1 "><i className="ri-arrow-right-up-line hover:text-[#1E1E24] hover:rotate-12 "  ></i></div>
+            <div className="circle c1 "><i className="ri-arrow-right-up-line"  ></i></div>
           </div>
           <div className="line l2"></div>
         </div>

@@ -122,7 +122,7 @@ const MovieDetails = () => {
              
       {
         (info.recomendations.length > 0 || info.similar.length>0)  &&
-        <div className="w-screen mt-4">
+        <div className="w-screen mt-4  text-blue ">
         <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
         <HorizantalCards  data={info.recomendations || info.similar} /> 
         </div>
