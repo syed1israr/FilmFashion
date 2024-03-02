@@ -12,6 +12,7 @@ import PeopleDetails from "../src/Components/Details/People/PeopleDetails"
 import ContactUs from "./Components/Contactus/ContactUs";
 import About from "./Components/About/About";
 import Trailer from "./Components/Templates/Trailer";
+import TV_trailer from "./Components/Templates/TV_trailer";
 import NotFound from "../src/Components/Templates/NotFound"
 export default function App() {
   
@@ -28,13 +29,14 @@ export default function App() {
     </Route>
 
     <Route path="/tv" element={<Tv_show/>}/>
-    <Route path="/tv/details/:id" element={<TVDetails/>}/>
+    <Route path="/tv/details/:id" element={<TVDetails/>}>
+       <Route path="trailer" element={<TV_trailer />} />
+    </Route>
     <Route path="/tv/details/:id/trailer" element={<Trailer/>}/>
     <Route path="/person" element={<People/>}/>
     <Route path="/person/details/:id" element={<PeopleDetails/>}/>
     <Route path="/contact" element={<ContactUs/>}/>
     <Route path="/about" element={<About/>}/>
-
 
     <Route path="*" element={<NotFound/>}/>
     </Routes>
