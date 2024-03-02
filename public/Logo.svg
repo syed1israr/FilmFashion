@@ -1,1 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(101,86,205,1)"><path d="M15.4142 4.99998H21.0082C21.556 4.99998 22 5.44461 22 6.00085V19.9991C22 20.5519 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5553 2 19.9991V6.00085C2 5.44808 2.45531 4.99998 2.9918 4.99998H8.58579L6.05025 2.46445L7.46447 1.05023L11.4142 4.99998H12.5858L16.5355 1.05023L17.9497 2.46445L15.4142 4.99998Z"></path></svg>
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg15214" viewBox="0 0 87.432 128.19" version="1.1">
+  <g id="layer1" transform="translate(-143.48 -459.91)">
+    <g id="g12541" transform="matrix(1.25 0 0 -1.25 205.08 502.28)">
+      <path id="path12543" d="m0 0c0-3.187-2.584-5.77-5.77-5.77h-17.066c-3.184 0-5.768 2.583-5.768 5.77v1.922c0 3.186 2.584 5.769 5.768 5.769h17.066c3.186 0 5.77-2.583 5.77-5.769v-1.922z" fill="#277a96"/>
+    </g>
+    <g id="g12545" transform="matrix(1.25 0 0 -1.25 228.38 553.43)">
+      <path id="path12547" d="m0 0c0-3.417-2.771-6.188-6.188-6.188h-53.622c-3.417 0-6.186 2.771-6.186 6.188v37.379c0 3.418 2.769 6.188 6.186 6.188h53.622c3.417 0 6.188-2.77 6.188-6.188v-37.379z" fill="#277a96"/>
+    </g>
+    <g id="g12549" transform="matrix(1.25 0 0 -1.25 225.81 551.55)">
+      <path id="path12551" d="m0 0c0-3.186-2.584-5.769-5.77-5.769h-49.995c-3.184 0-5.769 2.583-5.769 5.769v34.853c0 3.185 2.585 5.768 5.769 5.768h49.995c3.186 0 5.77-2.583 5.77-5.768v-34.853z" fill="#fff"/>
+    </g>
+    <g id="g12553" transform="matrix(1.25 0 0 -1.25 230.91 546.89)">
+      <path id="path12555" d="m0 0c0-1.129-0.915-2.043-2.043-2.043-1.129 0-2.043 0.914-2.043 2.043v28.602c0 1.129 0.914 2.044 2.043 2.044 1.128 0 2.043-0.915 2.043-2.044v-28.602z" fill="#277a96"/>
+    </g>
+    <g id="g12557" transform="matrix(1.25 0 0 -1.25 148.59 546.89)">
+      <path id="path12559" d="m0 0c0-1.129-0.914-2.043-2.043-2.043s-2.043 0.914-2.043 2.043v28.602c0 1.129 0.914 2.044 2.043 2.044s2.043-0.915 2.043-2.044v-28.602z" fill="#277a96"/>
+    </g>
+    <g id="g12561" transform="matrix(1.25 0 0 -1.25 161.91 561.16)">
+      <path id="path12563" d="m0 0-9.613-21.551h3.204l11.538 21.551h-5.129z" fill="#277a96"/>
+    </g>
+    <g id="g12565" transform="matrix(1.25 0 0 -1.25 212.79 561.16)">
+      <path id="path12567" d="m0 0 9.614-21.551h-3.205l-11.537 21.551h5.128z" fill="#277a96"/>
+    </g>
+    <g id="g12569" transform="matrix(1.25 0 0 -1.25 182.74 492.66)">
+      <path id="path12571" d="m0 0s-8.974 24.758-20.19 9.855c-11.217-14.903 16.603-11.796 9.903-1.892" stroke="#277a96" stroke-width=".691" fill="none"/>
+    </g>
+    <g id="g12573" transform="matrix(1.25 0 0 -1.25 190.35 492.66)">
+      <path id="path12575" d="m0 0s-11.536 18.829 15.384 24.277" stroke="#277a96" stroke-width=".691" fill="none"/>
+    </g>
+    <g id="g12577" transform="matrix(1.25 0 0 -1.25 212.79 462.72)">
+      <path id="path12579" d="m0 0c0-1.239-0.86-2.243-1.923-2.243-1.062 0-1.923 1.004-1.923 2.243s0.861 2.243 1.923 2.243c1.063 0 1.923-1.004 1.923-2.243" fill="#277a96"/>
+    </g>
+    <g id="g12581" transform="matrix(1.25 0 0 -1.25 172.53 481.95)">
+      <path id="path12583" d="m0 0c0-1.239-0.86-2.243-1.923-2.243-1.062 0-1.923 1.004-1.923 2.243s0.861 2.244 1.923 2.244c1.063 0 1.923-1.005 1.923-2.244" fill="#277a96"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Blue tv</dc:title>
+        <dc:date>2010-11-19T17:23:11</dc:date>
+        <dc:description>My tv</dc:description>
+        <dc:source>http://openclipart.org/detail/96769/blue-tv-by-dcatcherex</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>dcatcherex</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>electronic</rdf:li>
+            <rdf:li>television</rdf:li>
+            <rdf:li>tv</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
