@@ -10,7 +10,7 @@ import { RiEarthFill } from 'react-icons/ri'
 import { RiHome2Fill } from 'react-icons/ri'
 import Loader from '../../Templates/Loader.jsx'
 
-import HorizantalCards from '../../Templates/HorizantalCards.jsx'
+import HorizontalCards2 from '../../Templates/HorizantalCards2.jsx'
 
 const MovieDetails = () => {
   const  { pathname }=useLocation()
@@ -38,13 +38,13 @@ const MovieDetails = () => {
 
           <RiArrowDropLeftLine className=' -mt-1 text-4xl hover:text-purple-700'  onClick={()=>navigate(-1)} />
           </Link>
-          <a target='_blank'   href={`https://wikidata.org/wiki/${info.externalid.wikidata_id}`} className=' hover:text-purple-700'>
+          <a target='_blank'   href={`https://wikidata.org/wiki/${info.externalid.wikidata_id}`} className=' hover:text-[#3C887E]'>
             <RiEarthFill/>
             </a>
-          <a target='_blank'  href={info.detail.homepage} className=' hover:text-purple-700'>
+          <a target='_blank'  href={info.detail.homepage} className=' hover:text-[#3C887E]'>
             <RiHome2Fill/>
             </a>
-          <a target='_blank'  href= {`https://www.imdb.com/title/${info.externalid.imdb_id}`}  className=' hover:text-yellow-700 -mt-1'>
+          <a target='_blank'  href= {`https://www.imdb.com/title/${info.externalid.imdb_id}`}  className=' hover:text-[#3C887E] -mt-1'>
               IMDB
           </a>
 
@@ -124,7 +124,7 @@ const MovieDetails = () => {
         (info.recomendations.length > 0 || info.similar.length>0)  &&
         <div className="w-screen mt-4  text-blue ">
         <h2 className="text-3xl font-semibold text-white pl-5" >Similar Movies</h2>
-        <HorizantalCards  data={info.recomendations || info.similar} /> 
+        <HorizontalCards2  data={info.recomendations || info.similar} /> 
         </div>
       }          
    

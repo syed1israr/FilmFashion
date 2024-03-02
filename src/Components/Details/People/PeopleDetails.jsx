@@ -43,16 +43,16 @@ const MovieDetails = () => {
         <hr  className=' w-[40vh] bg-zinc-900 mb-4 mt-5'/>
         </div>
       <div className='w-[80%] flex  text-white gap-x-10'>
-           <a target='_blank'   href={`https://wikidata.org/wiki/${info.externalid.wikidata_id}`} className=' hover:text-purple-700 text-2xl text-white'>
+           <a target='_blank'   href={`https://wikidata.org/wiki/${info.externalid.wikidata_id}`} className=' hover:text-[#3C887E] text-2xl text-white'>
             <RiEarthFill/>
             </a>
-            <a target='_blank'   href={`https://facebook.com/${info.externalid.facebook_id}`} className=' hover:text-purple-700 text-2xl text-white'>
+            <a target='_blank'   href={`https://facebook.com/${info.externalid.facebook_id}`} className=' hover:text-[#3C887E] text-2xl text-white'>
             <RiFacebookBoxFill/>
             </a>
-            <a target='_blank'   href={`https://instagram.com/${info.externalid.instagram_id}`} className=' hover:text-purple-700 text-2xl text-white'>
+            <a target='_blank'   href={`https://instagram.com/${info.externalid.instagram_id}`} className=' hover:text-[#3C887E] text-2xl text-white'>
             <RiInstagramFill/>
             </a>
-            <a target='_blank'   href={`https://twitter.com/${info.externalid.twitter_id}`} className=' hover:text-purple-700 text-2xl text-white'>
+            <a target='_blank'   href={`https://twitter.com/${info.externalid.twitter_id}`} className=' hover:text-[#3C887E] text-2xl text-white'>
             <RiTwitterXLine/>
             </a>
 
