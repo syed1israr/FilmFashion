@@ -3,9 +3,9 @@ import ReactPlayer from 'react-player'
 import { useSelector } from 'react-redux'
 import { useLocation ,Link, useNavigate } from 'react-router-dom'
 import {   X } from 'react-feather'; 
-import Loader from './Loader';
+
 const Trailer = () => {
-    const { pathname }=useLocation()
+   
     const navigate=useNavigate()
     const YTvideo=useSelector(state=>state.tv.info.Videos)
     
