@@ -1,6 +1,6 @@
-# FilmFlush
+# FilmFashion
 
-Welcome to the FilmFlush - Movie Catalog App! This is a React-based web application that allows users to explore trending movies, popular movies, TV shows, and information about people involved in the entertainment industry. The app also provides details about individual movies, TV shows, and people, along with trailers for selected content.
+Welcome to the FilmFashion - Movie Catalog App! This is a React-based web application that allows users to explore trending movies, popular movies, TV shows, and information about people involved in the entertainment industry. The app also provides details about individual movies, TV shows, and people, along with trailers for selected content.
 
 ## Table of Contents
 - [Features](#features)
