@@ -8,7 +8,7 @@ import Tv_show from "./Components/TV shows/Tv_shows";
 import People  from "./Components/People/people";
 import MovieDetails from "../src/Components/Details/Movie/MovieDetails"
 import TVDetails from "../src/Components/Details/Tv/TvDetails"
-import PeopleDetails from "../src/Components/Details/People/PeopleDetails"
+import PeopleDetail from "./Components/Details/People/PeopleDetails"
 import ContactUs from "./Components/Contactus/ContactUs";
 import About from "./Components/About/About";
 import Trailer from "./Components/Templates/Trailer";
@@ -34,7 +34,7 @@ export default function App() {
     </Route>
     <Route path="/tv/details/:id/trailer" element={<Trailer/>}/>
     <Route path="/person" element={<People/>}/>
-    <Route path="/person/details/:id" element={<PeopleDetails/>}/>
+    <Route path="/person/details/:id" element={<PeopleDetail/>}/>
     <Route path="/contact" element={<ContactUs/>}/>
     <Route path="/about" element={<About/>}/>
 

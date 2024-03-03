@@ -54,7 +54,7 @@ const people = () => {
         <div className='  w-full   flex items-center justify-between '>
          
             <h1 className=' w-[20%] text-2xl text-zinc-400 font-semibold  flex  item bg-center justify-center'>
-                <RiArrowDropLeftLine className='text-4xl'  onClick={()=>navigate(-1)} />
+                <RiArrowDropLeftLine className='text-4xl hover:text-[#3C887E]'  onClick={()=>navigate(-1)} />
                 People <small className='text-sm ml-2 mt-4 text-zinc-600'>{categoery}</small></h1>
 
                 <div className='flex items-center justify-between w-[100%]'>

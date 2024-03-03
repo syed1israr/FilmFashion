@@ -36,7 +36,7 @@ const MovieDetails = () => {
         <nav className='w-full h-[10vh] text-zinc-200  flex gap-10 text-2xl item-center mt-8   '>
           <Link>
 
-          <RiArrowDropLeftLine className=' -mt-1 text-4xl hover:text-purple-700'  onClick={()=>navigate(-1)} />
+          <RiArrowDropLeftLine className=' -mt-1 text-4xl hover:text-[#3C887E]'  onClick={()=>navigate(-1)} />
           </Link>
           <a target='_blank'   href={`https://wikidata.org/wiki/${info.externalid.wikidata_id}`} className=' hover:text-[#3C887E]'>
             <RiEarthFill/>

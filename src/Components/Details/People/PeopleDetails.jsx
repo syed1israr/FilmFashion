@@ -10,7 +10,6 @@ import { RiEarthFill } from 'react-icons/ri'
 import { RiInstagramFill } from 'react-icons/ri'
 import { RiTwitterXLine } from 'react-icons/ri'
 import Loader from '../../Templates/Loader.jsx'
-
 import HorizantalCards from '../../Templates/HorizantalCards.jsx'
 
 const MovieDetails = () => {
@@ -30,9 +29,9 @@ const MovieDetails = () => {
     <div className='p-[9%] w-screen h-[200vh]  flex  bg-[#071013]  overflow-x-hidden' >
       
       <div className='w-[40%] -ml-[50px] '>
-      <nav className='w-full text-fuchsia-100  top-[7.5%] absolute '>
-          <Link>
-          <RiArrowDropLeftLine className=' -mt-1 text-5xl hover:text-purple-700'  onClick={()=>navigate(-1)} />
+      <nav className='text-fuchsia-100 absolute top-[60px] '>
+          <Link> 
+          <RiArrowDropLeftLine className=' -mt-1 text-5xl hover:text-[#3C887E]'  onClick={()=>navigate(-1)} />
           </Link>
        
       </nav>
