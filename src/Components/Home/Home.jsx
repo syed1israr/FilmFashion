@@ -39,7 +39,7 @@ const Home = () => {
       getheaderWallpaper();
     }
     if (!trending.length) {
-      console.log(categoery)
+      
       getTrending();
     }
   }, [categoery,page]);
