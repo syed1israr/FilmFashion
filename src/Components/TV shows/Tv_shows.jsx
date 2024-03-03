@@ -66,7 +66,7 @@ const Tv_show = () => {
        
        loader={<Loader/>}
        >
-       <Cards data={tv} title="tv"/>
+       <Cards data={tv} title="tv" CustomCss={"px-[5%] w-full h-full  flex flex-wrap  mt-6  pl-40 "}/>
        </InfiniteScroll>
        
         

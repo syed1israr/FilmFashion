@@ -9,8 +9,9 @@ import { RiArrowDropLeftLine } from 'react-icons/ri'
 import { RiEarthFill } from 'react-icons/ri'
 import { RiHome2Fill } from 'react-icons/ri'
 import Loader from '../../Templates/Loader.jsx'
-import Seasons_card from '../../Templates/Seasons_card.jsx'
+
 import HorizontalCards2 from '../../Templates/HorizantalCards2.jsx'
+import Cards from '../../Templates/Cards.jsx'
 
 const MovieDetails = () => {
   const  { pathname }=useLocation()
@@ -129,7 +130,7 @@ const MovieDetails = () => {
         <hr  className='mt-5 mb-5'/>
                <div className="w-screen mt-4 ml-4">
               <div className='-ml-12'>
-              <Seasons_card  data={info.detail.seasons}  title={"tv"}/> 
+              <Cards  data={info.detail.seasons}  title={"tv"} CustomCss={"w-[80vw] h-full  flex flex-wrap  mt-6"}/> 
               </div>
     </div>
 
