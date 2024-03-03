@@ -73,7 +73,7 @@ const Trending = () => {
        
        loader={<Loader/>}
        >
-       <Cards data={Trending} title={categoery}/>
+       <Cards data={Trending} title={categoery}  CustomCss={"px-[5%] w-full h-full  flex flex-wrap  mt-6  pl-40 "}/>
        </InfiniteScroll>
        
         

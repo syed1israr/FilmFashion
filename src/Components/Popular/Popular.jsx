@@ -70,7 +70,7 @@ const Popular = () => {
        
        loader={<Loader/>}
        >
-       <Cards data={Popular} title={categoery}/>
+       <Cards data={Popular} title={categoery}  CustomCss={"px-[5%] w-full h-full  flex flex-wrap  mt-6  pl-40 "} />
        </InfiniteScroll>
        
         

@@ -67,7 +67,7 @@ const people = () => {
        
        loader={<Loader/>}
        >
-       <Cards data={person} title="person"/>
+       <Cards data={person} title="person"  CustomCss={"px-[5%] w-full h-full  flex flex-wrap  mt-6  pl-40 "}/>
        </InfiniteScroll>
        
         
