@@ -1,7 +1,7 @@
 
 import ReactPlayer from 'react-player'
 import { useSelector } from 'react-redux'
-import { useLocation ,Link, useNavigate } from 'react-router-dom'
+import {  Link, useNavigate } from 'react-router-dom'
 import {   X } from 'react-feather'; 
 
 const Trailer = () => {
@@ -19,13 +19,11 @@ const Trailer = () => {
       >
         <X/>
       </Link>
-      <ReactPlayer
-          controls 
-          autoplay
-         
+      {  YTvideo ? <ReactPlayer
+          controls
           height={600}
           width={1000}
-         url={`https://www.youtube.com/watch?v=${YTvideo[0].key}`} />
+       url={`https://www.youtube.com/watch?v=${YTvideo[0].key}`} /> : <Loader/> }
     
     </div>
   ) 

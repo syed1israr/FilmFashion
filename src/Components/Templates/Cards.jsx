@@ -11,7 +11,7 @@ const Cards = ({data,title,CustomCss}) => {
                 className={`relative w-[35vh] ml-[6%] mb-[5%]`}
                 
                 >
-                  <img  src={ (c.poster_path ||  c.backdrop_path || c.profile_path) ? `https://image.tmdb.org/t/p/original/${ c.poster_path ||  c.backdrop_path || c.profile_path}` : noimg} className='w-[40vh] object-cover shadow-[8px_16px_32px_2px_rgba(0,0,0.5)]' alt="" />
+                  <img  src={ (c.poster_path ||  c.backdrop_path || c.profile_path) ? `https://image.tmdb.org/t/p/original/${ c.poster_path ||  c.backdrop_path || c.profile_path}` : noimg} className='w-[40vh] object-cover shadow-[8px_16px_32px_2px_rgba(0,0,0.5)] rounded-sm' alt="" />
                   <h1 className='text-2xl text-zinc-200 mt-3 font-semibold'>
                 {
                 c.name ||

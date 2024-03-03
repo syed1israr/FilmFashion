@@ -8,9 +8,9 @@ const Trailer = () => {
     const { pathname }=useLocation()
     const navigate=useNavigate()
     const YTvideo=useSelector(state=>state.movie.info.videos)
-    console.log(pathname.includes("movie"),YTvideo[0].key)
     
-  return YTvideo ?   (
+    
+  return  (
     <div className='bg-[rgba(0,0,0,0.8)] absolute top-0 left-0 w-screen h-screen flex items-center justify-center z-10000 '
     >
       <Link
@@ -19,14 +19,15 @@ const Trailer = () => {
       >
         <X/>
       </Link>
-      <ReactPlayer
+      {  YTvideo ? <ReactPlayer
           controls
           height={600}
           width={1000}
-       url={`https://www.youtube.com/watch?v=${YTvideo[0].key}`} />
+       url={`https://www.youtube.com/watch?v=${YTvideo[0].key}`} /> : <Loader/>}
+     
     
     </div>
-  ) : <Loader/>
+  ) 
 }
 
 export default Trailer

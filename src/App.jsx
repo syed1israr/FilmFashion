@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
-
 import Trending from "./Components/Trending/Trending";
 import Popular from "./Components/Popular/Popular";
 import Movie from "./Components/Movie/Movie";
@@ -22,15 +21,13 @@ export default function App() {
     <Route path="/" element={<Home/>}/>
     <Route path="/trending" element={<Trending/>}/>
     <Route path="/popular" element={<Popular/>}/>
-    
     <Route path="/movie" element={<Movie/>}/>
     <Route path="/movie/details/:id" element={<MovieDetails />}>
     <Route path="trailer" element={<Trailer />} />
     </Route>
-
     <Route path="/tv" element={<Tv_show/>}/>
     <Route path="/tv/details/:id" element={<TVDetails/>}>
-       <Route path="trailer" element={<TV_trailer />} />
+    <Route path="trailer" element={<TV_trailer />} />
     </Route>
     <Route path="/tv/details/:id/trailer" element={<Trailer/>}/>
     <Route path="/person" element={<People/>}/>

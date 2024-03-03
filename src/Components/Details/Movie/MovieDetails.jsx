@@ -53,7 +53,7 @@ const MovieDetails = () => {
           <hr  className='mb-4'/>
         <div className='w-full flex'>
           
-        <img src={`https://image.tmdb.org/t/p/original/${ info.detail.poster_path ||  info.detail.backdrop_path }`} className='w-[40vh] object-cover shadow-[8px_16px_32px_2px_rgba(0,0,0.5)]' alt="" />
+        <img src={`https://image.tmdb.org/t/p/original/${ info.detail.poster_path ||  info.detail.backdrop_path }`} className='w-[40vh] object-cover shadow-[8px_16px_32px_2px_rgba(0,0,0.5)]  rounded-[5px] ' alt="" />
       
       <div className="content ml-[5%]">
         <h1 className='text-5xl font-black text-white '>

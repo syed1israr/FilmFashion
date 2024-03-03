@@ -38,7 +38,7 @@ const MovieDetails = () => {
 
       <div className='w-full flex flex-col '>
         <div className='w-[100%] '>
-        <img src={`https://image.tmdb.org/t/p/original/${ info.detail.profile_path ||  info.detail.backdrop_path }`} className='  w-[30vw]  object-cover shadow-[8px_16px_32px_2px_rgba(0,0,0.5)]' alt="" />
+        <img src={`https://image.tmdb.org/t/p/original/${ info.detail.profile_path ||  info.detail.backdrop_path }`} className='  w-[30vw]  object-cover shadow-[8px_16px_32px_2px_rgba(0,0,0.5)] rounded-[5px]' alt="" />
         <hr  className=' w-[40vh] bg-zinc-900 mb-4 mt-5'/>
         </div>
       <div className='w-[80%] flex  text-white gap-x-10'>
