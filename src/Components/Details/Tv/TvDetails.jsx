@@ -9,7 +9,7 @@ import { RiArrowDropLeftLine } from 'react-icons/ri'
 import { RiEarthFill } from 'react-icons/ri'
 import { RiHome2Fill } from 'react-icons/ri'
 import Loader from '../../Templates/Loader.jsx'
-import HorizontalCards from '../../Templates/HorizantalCards.jsx'
+import Seasons_card from '../../Templates/Seasons_card.jsx'
 import HorizontalCards2 from '../../Templates/HorizantalCards2.jsx'
 
 const MovieDetails = () => {
@@ -119,17 +119,22 @@ const MovieDetails = () => {
              </div>
         </div>
         </div>
-        <hr  className='mt-5 mb-5'/>
-    <div className="w-screen mt-4">
-    <h2 className="text-3xl font-semibold text-white pl-5" >Seasons</h2>
-    <HorizontalCards2  data={info.detail.seasons} /> 
-    </div>
-
-    <hr  className='mt-5 mb-5'/>
-    <div className="w-screen mt-4">
+        
+        <div className="w-screen mt-4">
     <h2 className="text-3xl font-semibold text-white pl-5" >Similar Tv Shows</h2>
+    <hr  className='mt-5 mb-5'/>
     <HorizontalCards2  data={info.recomendations || info.similar} /> 
     </div>
+    <h2 className="text-3xl font-semibold text-white pl-5" >Seasons</h2>
+        <hr  className='mt-5 mb-5'/>
+               <div className="w-screen mt-4 ml-4">
+              <div className='-ml-12'>
+              <Seasons_card  data={info.detail.seasons}  title={"tv"}/> 
+              </div>
+    </div>
+
+   
+    
  <Outlet/>
     </div>
     

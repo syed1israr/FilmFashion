@@ -18,12 +18,12 @@ const HorizontalCards2 = ({ data }) => {
             alt=''
           />
           <div className='text-white h-[65%] p-3'>
-            <h1 className='text-xl font-semibold text-[#3C887E]'>{
+            <h1 className='text-xl font-semibold text-[#b6f9f1]'>{
               item.name || item.title || item.original_name || item.original_title
             }</h1>
             <p className='text-white text-[14px] mb-3'>
               {item.overview.slice(0, 100)}...
-              <Link className='text-blue-900'>more</Link>
+              <Link className='text-[#513896]'>more</Link>
             </p>
           </div>
         </Link>
